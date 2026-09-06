@@ -1,4 +1,9 @@
 runs/
 data/raw/
+<<<<<<< HEAD
 .venv/
 .env
+=======
+.env
+.venv/
+>>>>>>> caa870b0c1d57720dd3f25bfc05a548e0bb41b45
