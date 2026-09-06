@@ -1,3 +1,4 @@
 runs/
 data/raw/
 .env
+.venv/
