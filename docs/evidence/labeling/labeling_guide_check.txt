@@ -1,0 +1,64 @@
+Smart Recycle AI-Hub
+Labeling Guide Verification Evidence
+
+Date: 2026-09-10
+
+Document:
+docs/LABELING_GUIDE.md
+
+Purpose:
+Verify that the V1 labeling guide exists, follows the frozen
+project scope, and is correctly formatted before dataset annotation.
+
+V1 Training Classes:
+0 = plastic
+1 = metal
+2 = glass
+3 = paper_cardboard
+
+Reject is not a training class.
+
+Important Scope Rules:
+- Broken glass is excluded from V1.
+- Tetra Pak is excluded from V1.
+- Unsupported or ambiguous objects must not be forced into one
+  of the four training classes.
+- Bounding boxes must be tight around each supported object.
+- Separate physical objects must receive separate bounding boxes.
+
+Issue Found During Review:
+The first version of LABELING_GUIDE.md contained Markdown escaping
+and encoding artifacts, including escaped heading/list characters
+and malformed text.
+
+Examples detected:
+- Escaped Markdown characters
+- HTML space artifact
+- Encoding artifact
+
+Fix Applied:
+The file was rewritten using clean Markdown syntax and UTF-8
+compatible text.
+
+Verification Performed:
+
+Visual Markdown Preview:
+PASS
+
+Programmatic Check:
+bad_hash = False
+bad_dash = False
+bad_html_space = False
+bad_encoding = False
+
+Result:
+LABELING_GUIDE.md formatting verification: PASS
+
+Status:
+The labeling guide is ready for use during dataset annotation.
+
+Partner Output Verification:
+PENDING
+
+The partner environment/output must be inspected separately when
+the partner evidence becomes available.
