@@ -1,0 +1,59 @@
+Smart Recycle AI-Hub
+Environment Verification Evidence
+Laptop A
+
+Date: 2026-09-10
+
+Purpose:
+Verify that the AI development environment can load YOLO26n,
+use PyTorch with CUDA, run inference on the NVIDIA GPU,
+and save a valid prediction result.
+
+IMPORTANT:
+COCO classes were used only for environment/inference smoke testing.
+COCO classes are NOT the Smart Recycle AI-Hub project classes.
+
+Smart Recycle AI-Hub V1 classes:
+- Plastic
+- Metal
+- Glass
+- Paper/Cardboard
+- Unknown -> Reject
+
+Environment:
+Python: 3.14.6
+PyTorch: 2.14.0+cu126
+PyTorch CUDA Runtime: 12.6
+CUDA Available: True
+GPU: NVIDIA GeForce RTX 4050 Laptop GPU
+Ultralytics: 8.4.142
+OpenCV: 5.0.0
+YOLO Model: YOLO26n
+
+Inference Test:
+Input image: bus.jpg
+Model: yolo26n.pt
+Device: CUDA GPU 0
+Detected: 4 persons, 1 bus
+Inference time: 22.0 ms
+
+Visual verification:
+PASS
+
+The generated image was opened and visually inspected.
+Bounding boxes and confidence scores were present.
+The CLI result and the saved image were consistent.
+
+Evidence files:
+- bus.jpg
+- inference_result.jpg
+
+Result:
+YOLO26n environment smoke test: PASS
+
+Notes:
+The original Ultralytics output was created under runs/detect/.
+A verified copy was saved as inference_result.jpg inside the
+project evidence directory.
+
+No project waste classification was performed in this test.
