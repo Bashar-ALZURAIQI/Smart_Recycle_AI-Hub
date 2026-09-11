@@ -2,5 +2,10 @@ runs/
 data/raw/
 .env
 .venv/
-.vscode
+.vscode/
 *.pt
+data/processed/
+data/interim/
+data/inspection/
+__pycache__/
+*.pyc
